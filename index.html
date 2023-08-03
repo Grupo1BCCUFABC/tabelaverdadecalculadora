@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <link rel="icon" type="image/png" href="doc/github.png" />
+  <meta charset="UTF-8">
+  <title>Calculadora Logica Matematica</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+  <main>
+    <h1 id='title'>Calculadora Logica Matematica</h1>
+    <div class="calculator">
+      <input type="text" id="in" size="45" placeholder="Digite uma fórmula lógica" onkeypress="appetizerCheck(event)">
+      <div class="buttons">
+        <button data-title="Apagar tudo" id="ac" onclick="clearAll()">AC</button>
+        <button data-title="Proposição A" onclick="appendToScreen('A')">A</button>
+        <button data-title="Proposição B" onclick="appendToScreen('B')">B</button>
+        <button data-title="Proposição C" onclick="appendToScreen('C')">C</button>
+        <button data-title="Proposição D" onclick="appendToScreen('D')">D</button>
+        <button data-title="Negação" onclick="appendToScreen('¬')">¬</button>
+        <button data-title="Conjunção (E)" onclick="appendToScreen('∧')">∧</button>
+        <button data-title="Disjunção (OU)" onclick="appendToScreen('∨')">∨</button>
+        <button data-title="Condicional(Implicação)" onclick="appendToScreen('→')">→</button>
+        <button data-title="Bicondicional(Se e somente se)" onclick="appendToScreen('↔')">↔</button>
+        <button data-title="Parênteses de abertura" onclick="appendToScreen('&#40;')">&#40;</button>
+        <button data-title="parênteses de fechamento" onclick="appendToScreen('&#41;')">&#41;</button>
+        <input id="input_screen" type="button" value="=" onclick="makeTable()"><br><br>
+      </div>
+      <div id="table_screen"></div>
+  </main>
+  <script src='./script.js' type="text/javascript"></script>
+</body>
+
+</html>
